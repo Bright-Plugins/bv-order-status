@@ -93,9 +93,9 @@ final class BP_Order_Status_Control {
 /**
  * Initializes the main plugin
  */
-function BpOrderControl() {
+function BrightPluginsOrderControl() {
     return BP_Order_Status_Control::init();
 }
 
 // kick-off the plugin
-add_action( 'plugin_loaded', 'BpOrderControl' );
+add_action( 'plugin_loaded', 'BrightPluginsOrderControl' );
