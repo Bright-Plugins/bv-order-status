@@ -41,7 +41,7 @@ class Bootstrap {
                     ],
 
                     'default'  => 'default',
-                    'desc'     => __( 'To know more about the status option read the <a href="https: //brightplugins.com/docs/order-status-control-for-woocommerce-free/" target="_blank">documantatiom</a>.', 'bv-order-status' ),
+                    'desc'     => __( 'To know more about the status option read the <a href="https: //brightplugins.com/docs/order-status-control-for-woocommerce-free/" target="_blank">documantation</a>.', 'bv-order-status' ),
                 );
             }
 

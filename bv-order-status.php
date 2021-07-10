@@ -13,10 +13,10 @@
  * Text Domain:       bv-order-status
  * Domain Path:       /languages
  * Tested up to: 5.7.2
- * Requires at least: 5.5
- * WC requires at least: 4.9
+ * Requires at least: 5.3
+ * WC requires at least: 4.8
  * WC tested up to: 5.4.1
- * Requires PHP: 7.2
+ * Requires PHP: 7.0
  * @package           bv-order-status
  *
  * @link              http://BrightVessel.com
