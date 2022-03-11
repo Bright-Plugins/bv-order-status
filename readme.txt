@@ -1,8 +1,8 @@
 === Order Status Control for WooCommerce ===
-Contributors: brightvesseldev, niloybrightvessel
+Contributors: brightvesseldev, niloybrightvessel 
 Tags: WooCommerce, order, complete, status control, autocomplete,virtual, paypal, stripe
 Requires at least: 4.8
-Tested up to: 5.8.2
+Tested up to: 5.9
 Requires PHP: 7.0.0
 Stable Tag: 0.3
 License: GPLv2 or later
@@ -11,25 +11,27 @@ Auto Complete orders for virtual-downloadable products after successful payment 
 
 == Description ==
 
-Order Status control is a WooCommerce Extension which helps shop admin to complete order automatically.
-By default WooCommerce is auto complete "downloadable" products but not "Virtual" products.
-with help of this plugin it's auto complete virtual products as well.
+The Order Status Control for WooCommerce plugin by Bright Plugins helps shop admins complete orders automatically. By default, WooCommerce is auto-complete “downloadable” products but not “Virtual” products. This plugin auto-completes virtual products as well. It also comes with two more additional cases. 
 
-it's also comes with 2 more additional cases. here is the all case details below:
-* <strong>Default:</strong> Default WooCommerce Order method.
-* <strong>All Orders which content only Virtual Products:</strong> Product which doesn’t have any other physical products and only have Virtual product will mark as completed.
-* <strong>All Orders which have Paid Successfully:</strong> All orders (along with physical products) which successfully paid the order payment will mark as completed.
-* <strong>All Orders:</strong> No matter what is the order content or has (payment complete, virtual, physical, offline payments, etc.) as soon as a customer land on the thank you page the order status will be changed to complete.
+= Plugin Features: =
 
-Order Status Control option will be found under WooCommerce > settings > General Tab
+* **Default:** Default WooCommerce Order method.
+* **All orders containing only Virtual Products:** Orders that don’t have any other physical products and only have Virtual products will be marked as completed.
+* **All Orders that have Paid Successfully:** All orders (along with physical products) that successfully paid will be marked as complete.
+* **All Orders:** No matter what is the order contains or has (payment complete, virtual, physical, offline payments, etc.), as soon as a customer land on the thank you page, the order status will be changed to complete.
+
+= Setting Location: =
+
+Order Status Control option will be found under WooCommerce > Settings > General Tab
 
 ## 🔥 WHAT’S NEXT ##
 
-If you like this order status control plugin, then consider checking out our other free plugins:
+**If you like this order status control plugin, then consider checking out our other free plugins:**
 
 [Preorder for WooCommerce](https://wordpress.org/plugins/pre-orders-for-woocommerce/) – Ultimate Preorders Plugin for WooCommerce.
 [Show Stock for WooCommerce](https://wordpress.org/plugins/woo-show-stock/)
 [Disable Email Notifications for WooCommerce](https://wordpress.org/plugins/woo-disable-email-notifications/)
+[Custom Order Status](https://wordpress.org/plugins/bp-custom-order-status-for-woocommerce/) Allows to create custom order status for WooCommerce 
 
 
 == Installation ==
