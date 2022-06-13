@@ -2,9 +2,9 @@
 Contributors: brightvesseldev, niloybrightvessel 
 Tags: WooCommerce, order, complete, status control, autocomplete,virtual, paypal, stripe
 Requires at least: 4.8
-Tested up to: 5.9
+Tested up to: 6.0
 Requires PHP: 7.0.0
-Stable Tag: 0.3
+Stable Tag: 1.0
 License: GPLv2 or later
 
 Auto Complete orders for virtual-downloadable products after successful payment or predefine status.
