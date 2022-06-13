@@ -40,7 +40,7 @@ class Bootstrap {
 		if ( $file !== $this->pluginBase ) {
 			return $links;
 		}
-		$support_link = '<a title="Click here to rate and review this plugin on WordPress.org" target="_blank" href="https://wordpress.org/support/plugin/order-status-control-for-woocommerce/reviews/?filter=5">' . __( ' Rate this plugin » ', 'bp-custom-order-status' ) . '</a>';
+		$support_link = '<a title="Click here to rate and review this plugin on WordPress.org" target="_blank" href="https://wordpress.org/support/plugin/order-status-control-for-woocommerce/reviews/?filter=5">' . __( ' Rate this plugin » ', 'bp-order-status' ) . '</a>';
 
 		$links[] = $support_link;
 
@@ -60,12 +60,21 @@ class Bootstrap {
 			if ( isset( $section['id'] ) && 'general_options' == $section['id'] &&
 				isset( $section['type'] ) && 'sectionend' == $section['type'] ) {
 
-				if ( file_exists( WP_PLUGIN_DIR . '/bp-custom-order-status/main.php' ) ) {
+				if ( is_plugin_active( 'bp-custom-order-status-for-woocommerce/main.php' ) ) {
+
+					$cosm__title     = __( 'Check Options', 'bv-order-status' );
+					$cosm_plugin_url = admin_url( 'admin.php?page=wcbv-order-status-setting' );
+
+				} elseif ( file_exists( WP_PLUGIN_DIR . '/bp-custom-order-status-for-woocommerce/main.php' ) ) {
+
 					$cosm__title     = __( 'Activate Now', 'bv-order-status' );
-					$cosm_plugin_url = wp_nonce_url( 'plugins.php?action=activate&plugin=bp-custom-order-status/main.php&plugin_status=all&paged=1', 'activate-plugin_bp-custom-order-status/main.php' );
+					$cosm_plugin_url = wp_nonce_url( 'plugins.php?action=activate&plugin=bp-custom-order-status-for-woocommerce/main.php&plugin_status=all&paged=1', 'activate-plugin_bp-custom-order-status-for-woocommerce/main.php' );
+
 				} else {
+
 					$cosm__title     = __( 'Install Now', 'bv-order-status' );
-					$cosm_plugin_url = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=bp-custom-order-status' ), 'install-plugin_bp-custom-order-status' );
+					$cosm_plugin_url = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=bp-custom-order-status-for-woocommerce' ), 'install-plugin_bp-custom-order-status-for-woocommerce' );
+
 				}
 
 				$updated_settings[] = array(
