@@ -60,12 +60,12 @@ class Bootstrap {
 			if ( isset( $section['id'] ) && 'general_options' == $section['id'] &&
 				isset( $section['type'] ) && 'sectionend' == $section['type'] ) {
 
-				if ( file_exists( WP_PLUGIN_DIR . '/bv-order-status/bv-order-status.php' ) ) {
+				if ( file_exists( WP_PLUGIN_DIR . '/bp-custom-order-status/main.php' ) ) {
 					$cosm__title     = __( 'Activate Now', 'bv-order-status' );
-					$cosm_plugin_url = wp_nonce_url( 'plugins.php?action=activate&plugin=bv-order-status/bv-order-status.php&plugin_status=all&paged=1', 'activate-plugin_bv-order-status/bv-order-status.php' );
+					$cosm_plugin_url = wp_nonce_url( 'plugins.php?action=activate&plugin=bp-custom-order-status/main.php&plugin_status=all&paged=1', 'activate-plugin_bp-custom-order-status/main.php' );
 				} else {
 					$cosm__title     = __( 'Install Now', 'bv-order-status' );
-					$cosm_plugin_url = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=bv-order-status' ), 'install-plugin_bv-order-status' );
+					$cosm_plugin_url = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=bp-custom-order-status' ), 'install-plugin_bp-custom-order-status' );
 				}
 
 				$updated_settings[] = array(
