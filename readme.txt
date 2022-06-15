@@ -49,6 +49,10 @@ Order Status Control option will be found under WooCommerce > Settings > General
 
 == Changelog ==
 
+= 1.0 - 15 Jun 22 =
+* [Compatibility] with WooCommerce 6.5.1
+* [Compatibility] with WordPress 6.0
+
 = 0.3 - 1 Dec 21 =
 * Support for WooCommerce version 5.9
 
