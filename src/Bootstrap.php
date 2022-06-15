@@ -8,15 +8,67 @@ class Bootstrap {
 	 * @var mixed
 	 */
 	protected $pluginBase = BVOS_BASE_FILE;
+	/**
+	 * @var mixed
+	 */
+	public $cosm__title;
+	/**
+	 * @var mixed
+	 */
+	public $cosm_plugin_url;
+	/**
+	 * @var boolen
+	 */
+	public $cosm_activate;
 
 	public function __construct() {
 
 		// add_action( 'admin_init', [$this, 'dfwc_param_cehck'], 90 );
 		Order::init();
-
+		$this->define_vars();
+		add_action( 'admin_init', array( 'PAnD', 'init' ) );
+		add_action( 'admin_notices', [$this, 'show_cosm_notice'] );
 		add_action( 'woocommerce_general_settings', [$this, 'addOrderControlSettings'], 50 );
 		add_filter( "plugin_row_meta", [$this, 'pluginMetaLinks'], 20, 2 );
 		add_filter( "plugin_action_links_$this->pluginBase", [$this, 'plugin_settings_link'] );
+	}
+	public function define_vars() {
+
+		include_once ABSPATH . 'wp-admin/includes/plugin.php';
+
+		if ( is_plugin_active( 'bp-custom-order-status-for-woocommerce/main.php' ) ) {
+
+			$this->cosm__title     = __( 'Check Options', 'bv-order-status' );
+			$this->cosm_activate   = true;
+			$this->cosm_plugin_url = admin_url( 'admin.php?page=wcbv-order-status-setting' );
+
+		} elseif ( file_exists( WP_PLUGIN_DIR . '/bp-custom-order-status-for-woocommerce/main.php' ) ) {
+
+			$this->cosm__title     = __( 'Activate Now', 'bv-order-status' );
+			$this->cosm_activate   = false;
+			$this->cosm_plugin_url = wp_nonce_url( 'plugins.php?action=activate&plugin=bp-custom-order-status-for-woocommerce/main.php&plugin_status=all&paged=1', 'activate-plugin_bp-custom-order-status-for-woocommerce/main.php' );
+
+		} else {
+
+			$this->cosm__title     = __( 'Install Now', 'bv-order-status' );
+			$this->cosm_activate   = false;
+			$this->cosm_plugin_url = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=bp-custom-order-status-for-woocommerce' ), 'install-plugin_bp-custom-order-status-for-woocommerce' );
+
+		}
+	}
+	/**
+	 * @return null
+	 */
+	public function show_cosm_notice() {
+		if ( $this->cosm_activate || !\PAnD::is_admin_notice_active( 'cosm-os-notice-30' ) ) {
+			return;
+		}
+
+		?>
+			<div data-dismissible="cosm-os-notice-30" class="info notice notice-info is-dismissible">
+				<p><?php _e( 'Do you need full control over your Order Status Management? Try Bright Vessel\'s completely free <b>Custom Order Status Manager for WooCommerce</b> plugin. <a href="' . $this->cosm_plugin_url . '">' . $this->cosm__title . '</a>', 'sample-text-domain' );?></p>
+			</div>
+		<?php
 	}
 	/**
 	 * Add zSettings Link
@@ -93,7 +145,7 @@ class Bootstrap {
 
 					'default'  => 'default',
 					'desc'     => __( 'To know more about the status option read the <a href="https://brightplugins.com/docs/order-status-control-for-woocommerce-free/" target="_blank">documentation</a>.<br>
-                    Do you need full control over your Order Status Management?<br>Try Bright Vessel\'s completely free Custom Order Status Manager for WooCommerce. <a href="' . $cosm_plugin_url . '">' . $cosm__title . '</a>', 'bv-order-status' ),
+                    Do you need full control over your Order Status Management?<br>Try Bright Vessel\'s completely free <b>Custom Order Status Manager for WooCommerce</b> plugin <a href="' . $this->cosm_plugin_url . '">' . $this->cosm__title . '</a>', 'bv-order-status' ),
 				);
 			}
 

@@ -22,6 +22,7 @@ class ComposerStaticInit91bf0e64a7ebd700f2a495a6dce0343c
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'PAnD' => __DIR__ . '/..' . '/collizo4sky/persist-admin-notices-dismissal/persist-admin-notices-dismissal.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
