@@ -11,7 +11,7 @@ Auto Complete orders for virtual-downloadable products after successful payment 
 
 == Description ==
 
-The Order Status Control for WooCommerce plugin by Bright Plugins helps shop admins complete orders automatically. By default, WooCommerce is auto-complete “downloadable” products but not “Virtual” products. This plugin auto-completes virtual products as well. It also comes with two more additional cases. 
+The **Order Status Control for WooCommerce** plugin by Bright Plugins helps shop admins complete orders automatically. By default, WooCommerce is auto-complete “downloadable” products but not “Virtual” products. This plugin auto-completes virtual products as well. It also comes with two more additional cases. 
 
 = Plugin Features: =
 
@@ -49,8 +49,8 @@ Order Status Control option will be found under WooCommerce > Settings > General
 
 == Changelog ==
 
-= 1.0 - 15 Jun 22 =
-* [Compatibility] with WooCommerce 6.5.1
+= 1.0 - 22 Jun 22 =
+* [Compatibility] with WooCommerce 6.6.1
 * [Compatibility] with WordPress 6.0
 
 = 0.3 - 1 Dec 21 =

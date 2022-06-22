@@ -15,7 +15,7 @@
  * Tested up to: 6.0
  * Requires at least: 5.3
  * WC requires at least: 4.8
- * WC tested up to: 6.5.1
+ * WC tested up to: 6.6.1
  * Requires PHP: 7.0
  * @package           bv-order-status
  *
