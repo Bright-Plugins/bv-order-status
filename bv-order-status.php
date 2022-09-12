@@ -7,15 +7,15 @@
  * Plugin Name:       Order Status Control for WooCommerce
  * Plugin URI:
  * Description:       Auto Complete orders for virtual-downloadable products after successful payment or predefine status.
- * Version:           1.0
+ * Version:           1.0.1
  * Author:            Bright Plugins
  * Author URI:        https://BrightPlugins.com
  * Text Domain:       bv-order-status
  * Domain Path:       /languages
- * Tested up to: 6.0
+ * Tested up to: 6.0.2
  * Requires at least: 5.3
  * WC requires at least: 4.8
- * WC tested up to: 6.6.1
+ * WC tested up to: 6.8.2
  * Requires PHP: 7.0
  * @package           bv-order-status
  *
