@@ -3,11 +3,11 @@ Contributors: brightvesseldev, niloybrightvessel
 Tags: WooCommerce, order, complete, status control, autocomplete,virtual, paypal, stripe
 Requires at least: 4.8
 Tested up to: 6.0
-Requires PHP: 7.0.0
-Stable Tag: 1.0.1
+Requires PHP: 7.2
+Stable Tag: 1.0.2
 License: GPLv2 or later
 
-Auto Complete orders for virtual-downloadable products after successful payment or predefine status.
+Auto Complete orders for virtual-downloadable products after a successful payment or predefine status.
 
 == Description ==
 
@@ -18,7 +18,7 @@ Auto Complete orders for virtual-downloadable products after successful payment 
 * **Default:** Default WooCommerce Order method.
 * **All orders containing only Virtual Products:** Orders that don’t have any other physical products and only have Virtual products will be marked as completed.
 * **All Orders that have Paid Successfully:** All orders (along with physical products) that successfully paid will be marked as complete.
-* **All Orders:** No matter what is the order contains or has (payment complete, virtual, physical, offline payments, etc.), as soon as a customer land on the thank you page, the order status will be changed to complete.
+* **All Orders:** No matter what the order contains or has (payment complete, virtual, physical, offline payments, etc.), as soon as a customer land on the thank you page, the order status will be changed to complete.
 
 = Setting Location: =
 
@@ -39,7 +39,7 @@ Order Status Control option will be found under WooCommerce > Settings > General
 - Go to the WordPress Dashboard "Add New Plugin" section.
 - Search For "Order Status Control".
 - Install it by clicking the "Install Now" button.
-- When installation finishes, click "Activate Plugin" button.
+- When installation finishes, click the "Activate Plugin" button.
 
 == Frequently Asked Questions ==
  
@@ -48,6 +48,10 @@ Order Status Control option will be found under WooCommerce > Settings > General
 == Screenshots ==
 
 == Changelog ==
+
+= 1.0.2 - 17 May 23 =
+* Added: COT/HPOS compatibility
+* [Compatibility] with WooCommerce 7.7.0
 
 = 1.0 - 12 Sep 22 =
 * [Compatibility] with WooCommerce 6.8

@@ -69,7 +69,7 @@ class Bootstrap {
 				<p><?php _e( 'Do you need full control over your Order Status Management? Try Bright Vessel\'s completely free <b>Custom Order Status Manager for WooCommerce</b> plugin. <a href="' . $this->cosm_plugin_url . '">' . $this->cosm__title . '</a>', 'sample-text-domain' );?></p>
 			</div>
 		<?php
-	}
+}
 	/**
 	 * Add zSettings Link
 	 * @param $links
