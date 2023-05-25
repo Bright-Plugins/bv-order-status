@@ -11,7 +11,7 @@ Auto Complete orders for virtual-downloadable products after a successful paymen
 
 == Description ==
 
-**Order Status Control for WooCommerce** plugin helps shop admins complete orders automatically. By default, WooCommerce is auto-complete “downloadable” products but not “Virtual” products. This plugin auto-completes virtual products as well. It also comes with two more additional cases. 
+**Order Status Control for WooCommerce** plugin helps shop admins complete orders automatically. By default, WooCommerce auto-complete “downloadable” products but not “Virtual” products. This plugin auto-completes virtual products as well. It also comes with two additional cases. 
 
 = Plugin Features: =
 
@@ -31,7 +31,7 @@ Order Status Control option will be found under WooCommerce > Settings > General
 [Preorder for WooCommerce](https://wordpress.org/plugins/pre-orders-for-woocommerce/) – Ultimate Preorders Plugin for WooCommerce.
 [Show Stock for WooCommerce](https://wordpress.org/plugins/woo-show-stock/)
 [Disable Email Notifications for WooCommerce](https://wordpress.org/plugins/woo-disable-email-notifications/)
-[Custom Order Status](https://wordpress.org/plugins/bp-custom-order-status-for-woocommerce/) Allows to create custom order status for WooCommerce 
+[Custom Order Status](https://wordpress.org/plugins/bp-custom-order-status-for-woocommerce/) Allows creating custom order status for WooCommerce 
 
 
 == Installation ==
@@ -39,7 +39,7 @@ Order Status Control option will be found under WooCommerce > Settings > General
 - Go to the WordPress Dashboard "Add New Plugin" section.
 - Search For "Order Status Control".
 - Install it by clicking the "Install Now" button.
-- When installation finishes, click the "Activate Plugin" button.
+- When the installation finishes, click the "Activate Plugin" button.
 
 == Frequently Asked Questions ==
  
@@ -49,7 +49,7 @@ Order Status Control option will be found under WooCommerce > Settings > General
 
 == Changelog ==
 
-= 1.0.2 - 17 May 23 =
+= 1.0.2 - 26 May 23 =
 * Added: COT/HPOS compatibility
 * [Compatibility] with WooCommerce 7.7.0
 

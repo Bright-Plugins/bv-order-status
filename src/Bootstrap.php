@@ -76,7 +76,7 @@ class Bootstrap {
 	 */
 	public function plugin_settings_link( $links ) {
 		$row_meta = array(
-			'settings' => '<a href="' . get_admin_url( null, 'admin.php?page=wc-settings&tab=general' ) . '">' . __( 'Settings', 'pre-orders-for-woocommerce' ) . '</a>',
+			'settings' => '<a href="' . get_admin_url( null, 'admin.php?page=wc-settings&tab=general' ) . '">' . __( 'Settings', 'bv-order-status' ) . '</a>',
 		);
 
 		return array_merge( $links, $row_meta );
