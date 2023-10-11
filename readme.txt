@@ -2,7 +2,7 @@
 Contributors: brightvesseldev, niloybrightvessel 
 Tags: WooCommerce, order, complete, status control, autocomplete,virtual, paypal, stripe
 Requires at least: 4.8
-Tested up to: 6.0
+Tested up to: 6.2.2
 Requires PHP: 7.2
 Stable Tag: 1.0.2
 License: GPLv2 or later
