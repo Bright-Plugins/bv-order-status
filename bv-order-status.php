@@ -2,7 +2,6 @@
 /**
  * The plugin bootstrap file
  *
- *
  * @wordpress-plugin
  * Plugin Name:       Order Status Control for WooCommerce
  * Plugin URI:
@@ -25,7 +24,7 @@
  */
 
 // If this file is called directly, abort.
-if ( !defined( 'WPINC' ) ) {
+if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
@@ -37,19 +36,22 @@ define( 'BVOS_FILE', __FILE__ );
 define( 'BVOS_BASE_FILE', plugin_basename( __FILE__ ) );
 
 require __DIR__ . '/vendor/autoload.php';
-use \BP_Order_Control\Bootstrap;
+use BP_Order_Control\Bootstrap;
 
-add_action( 'before_woocommerce_init', function () {
-	if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
-		\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+add_action(
+	'before_woocommerce_init',
+	function () {
+		if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+		}
 	}
-} );
+);
 final class BP_Order_Status_Control {
 
 	private function __construct() {
 		register_activation_hook( __FILE__, array( $this, 'pluginActivation' ) );
 		register_activation_hook( __FILE__, array( $this, 'pluginDeactivation' ) );
-		add_action( 'woocommerce_loaded', [$this, 'initPlugin'], 90 );
+		add_action( 'woocommerce_loaded', array( $this, 'initPlugin' ), 90 );
 	}
 
 	/**
@@ -58,7 +60,7 @@ final class BP_Order_Status_Control {
 	 * @return void
 	 */
 	public function initPlugin() {
-		new Bootstrap;
+		new Bootstrap();
 	}
 
 	/**
@@ -68,16 +70,16 @@ final class BP_Order_Status_Control {
 	 */
 	public function pluginActivation() {
 		$installed = get_option( 'bp_order_status_control_installed' );
-		if ( !$installed ) {
+		if ( ! $installed ) {
 			update_option( 'bp_order_status_control_installed', time() );
 		}
 	}
 	/**
 	 * Run Codes on Plugin deactivation
+	 *
 	 * @return void
 	 */
 	public function pluginDeactivation() {
-
 	}
 
 	/**
@@ -90,7 +92,7 @@ final class BP_Order_Status_Control {
 		 * @var mixed
 		 */
 		static $instance = false;
-		if ( !$instance ) {
+		if ( ! $instance ) {
 			$instance = new self();
 		}
 		return $instance;

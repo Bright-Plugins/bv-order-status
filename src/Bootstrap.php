@@ -27,10 +27,10 @@ class Bootstrap {
 		Order::init();
 		$this->define_vars();
 		add_action( 'admin_init', array( 'PAnD', 'init' ) );
-		add_action( 'admin_notices', [$this, 'show_cosm_notice'] );
-		add_action( 'woocommerce_general_settings', [$this, 'addOrderControlSettings'], 50 );
-		add_filter( "plugin_row_meta", [$this, 'pluginMetaLinks'], 20, 2 );
-		add_filter( "plugin_action_links_$this->pluginBase", [$this, 'plugin_settings_link'] );
+		add_action( 'admin_notices', array( $this, 'show_cosm_notice' ) );
+		add_action( 'woocommerce_general_settings', array( $this, 'addOrderControlSettings' ), 50 );
+		add_filter( 'plugin_row_meta', array( $this, 'pluginMetaLinks' ), 20, 2 );
+		add_filter( "plugin_action_links_$this->pluginBase", array( $this, 'plugin_settings_link' ) );
 	}
 	public function define_vars() {
 
@@ -60,18 +60,19 @@ class Bootstrap {
 	 * @return null
 	 */
 	public function show_cosm_notice() {
-		if ( $this->cosm_activate || !\PAnD::is_admin_notice_active( 'cosm-os-notice-30' ) ) {
+		if ( $this->cosm_activate || ! \PAnD::is_admin_notice_active( 'cosm-os-notice-45' ) ) {
 			return;
 		}
 
 		?>
-			<div data-dismissible="cosm-os-notice-30" class="info notice notice-info is-dismissible">
-				<p><?php _e( 'Do you need full control over your Order Status Management? Try Bright Vessel\'s completely free <b>Custom Order Status Manager for WooCommerce</b> plugin. <a href="' . $this->cosm_plugin_url . '">' . $this->cosm__title . '</a>', 'sample-text-domain' );?></p>
+			<div data-dismissible="cosm-os-notice-45" class="info notice notice-info is-dismissible">
+				<p><?php _e( 'Do you need full control over your Order Status Management? Try Bright Vessel\'s completely free <b>Custom Order Status Manager for WooCommerce</b> plugin. <a href="' . $this->cosm_plugin_url . '">' . $this->cosm__title . '</a>', 'sample-text-domain' ); ?></p>
 			</div>
 		<?php
-}
+	}
 	/**
 	 * Add zSettings Link
+	 *
 	 * @param $links
 	 */
 	public function plugin_settings_link( $links ) {
@@ -84,8 +85,8 @@ class Bootstrap {
 	/**
 	 * Add links to plugin's description in plugins table
 	 *
-	 * @param  array   $links Initial list of links.
-	 * @param  string  $file  Basename of current plugin.
+	 * @param  array  $links Initial list of links.
+	 * @param  string $file  Basename of current plugin.
 	 * @return array
 	 */
 	public function pluginMetaLinks( $links, $file ) {
@@ -134,18 +135,21 @@ class Bootstrap {
 					'desc_tip' => __( 'Set condition for autocomplete order status', 'bv-order-status' ),
 					'id'       => 'wc_order_status_control',
 					'type'     => 'select',
-					'options'  => [
+					'options'  => array(
 						'default'      => __( 'Default', 'bv-order-status' ),
 						'only_virtual' => __( 'All Orders which content only Virtual Products', 'bv-order-status' ),
 						'only_paid'    => __( 'All Orders which have Paid Sucessfully', 'bv-order-status' ),
 						'all'          => __( 'All Orders', 'bv-order-status' ),
-						//    ''             => __( 'Custom Rules (WIP)', 'bv-order-status' ),
+						// ''             => __( 'Custom Rules (WIP)', 'bv-order-status' ),
 
-					],
+					),
 
 					'default'  => 'default',
-					'desc'     => __( 'To know more about the status option read the <a href="https://brightplugins.com/docs/order-status-control-for-woocommerce-free/" target="_blank">documentation</a>.<br>
-                    Do you need full control over your Order Status Management?<br>Try Bright Vessel\'s completely free <b>Custom Order Status Manager for WooCommerce</b> plugin <a href="' . $this->cosm_plugin_url . '">' . $this->cosm__title . '</a>', 'bv-order-status' ),
+					'desc'     => __(
+						'To know more about the status option read the <a href="https://brightplugins.com/docs/order-status-control-for-woocommerce-free/" target="_blank">documentation</a>.<br>
+                    Do you need full control over your Order Status Management?<br>Try Bright Vessel\'s completely free <b>Custom Order Status Manager for WooCommerce</b> plugin <a href="' . $this->cosm_plugin_url . '">' . $this->cosm__title . '</a>',
+						'bv-order-status'
+					),
 				);
 			}
 
@@ -154,5 +158,4 @@ class Bootstrap {
 
 		return $updated_settings;
 	}
-
 }

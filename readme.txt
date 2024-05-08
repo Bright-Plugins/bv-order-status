@@ -49,6 +49,10 @@ Order Status Control option will be found under WooCommerce > Settings > General
 
 == Changelog ==
 
+= 1.0.3 - 08 May 24 =
+* Update: Code Refactor
+* [Compatibility] with WooCommerce 8.8.3
+
 = 1.0.2 - 26 May 23 =
 * Added: COT/HPOS compatibility
 * [Compatibility] with WooCommerce 7.7.0
