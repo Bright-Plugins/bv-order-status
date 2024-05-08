@@ -11,7 +11,7 @@
  * Author URI:        https://BrightPlugins.com
  * Text Domain:       bv-order-status
  * Domain Path:       /languages
- * Tested up to: 6.2
+ * Tested up to: 6.5.3
  * Requires Plugins: woocommerce
  * Requires at least: 5.3
  * WC requires at least: 4.8

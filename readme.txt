@@ -1,6 +1,6 @@
 === Order Status Control for WooCommerce ===
 Contributors: brightvesseldev, niloybrightvessel 
-Tags: WooCommerce, order, complete, status control, autocomplete,virtual, paypal, stripe
+Tags: order complete, status control, autocomplete,virtual
 Requires at least: 4.8
 Tested up to: 6.5.3
 Requires PHP: 7.2
