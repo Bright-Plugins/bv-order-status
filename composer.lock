@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "collizo4sky/persist-admin-notices-dismissal",
-            "version": "1.4.4",
+            "version": "1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/w3guy/persist-admin-notices-dismissal.git",
-                "reference": "900739eb6b0ec0210465f5983a6d4e0e420289e4"
+                "reference": "163b868c98cf97ea15b4d7e1305e2d52c9242e7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/w3guy/persist-admin-notices-dismissal/zipball/900739eb6b0ec0210465f5983a6d4e0e420289e4",
-                "reference": "900739eb6b0ec0210465f5983a6d4e0e420289e4",
+                "url": "https://api.github.com/repos/w3guy/persist-admin-notices-dismissal/zipball/163b868c98cf97ea15b4d7e1305e2d52c9242e7e",
+                "reference": "163b868c98cf97ea15b4d7e1305e2d52c9242e7e",
                 "shasum": ""
             },
             "require": {
@@ -45,16 +45,16 @@
                 "issues": "https://github.com/w3guy/persist-admin-notices-dismissal/issues",
                 "source": "https://github.com/w3guy/persist-admin-notices-dismissal"
             },
-            "time": "2020-12-31T17:12:37+00:00"
+            "time": "2024-03-10T15:11:42+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
