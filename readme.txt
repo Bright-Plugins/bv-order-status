@@ -1,5 +1,5 @@
 === Order Status Control for WooCommerce ===
-Contributors: brightvesseldev, im_niloy, kleinmannbrightvessel 
+Contributors: brightvesseldev, niloybrightvessel, kleinmannbrightvessel 
 Tags: order complete, status control, autocomplete,virtual
 Requires at least: 4.8
 Tested up to: 6.7.1
@@ -49,7 +49,7 @@ Order Status Control option will be found under WooCommerce > Settings > General
 
 == Changelog ==
 
-= 1.0.4 - 28 Nv 24 =
+= 1.0.4 - 3 Dec 24 =
 * Update: Composer dependencies 
 * [Compatibility] with WooCommerce 9.4.x
 * [Compatibility] with WordPress 6.7.x
